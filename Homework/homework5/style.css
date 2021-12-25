@@ -1,0 +1,32 @@
+.table{
+    border-collapse: collapse;
+}
+.header{
+   font-size: 30px;
+    text-align: center;
+    color: blue;
+    background: #a6e0ff;
+    padding: 10px;
+}
+.menu{
+    background: url(img/menu.png) repeat-y;
+}
+ul{
+    margin-right: 40px;
+}
+.content{
+    background: url(img/ball.png) right top repeat-y;
+}
+h2{
+    text-align: center;
+}
+.team{
+    float: left;
+}
+.footer{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    background: #a6e0ff;
+    padding: 20px;
+}

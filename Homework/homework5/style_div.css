@@ -1,0 +1,39 @@
+.img_menu{     
+    background: url(img/menu.png) left top repeat-y;
+    }
+    .img_ball{
+        background: url(img/ball.png) right top repeat-y;
+    }
+    .header{
+        font-size: 30px;
+        text-align: center;
+        color: blue;
+        background: #a6e0ff;
+        padding: 10px;
+    }
+    .footer{
+        font-size: 30px;
+        color: blue;
+        text-align: center;
+        background: #a6e0ff;
+        padding: 20px;
+    }
+    .menu{    
+        float: left;
+        margin-left: -15px; 
+    }
+    .team{
+        float: left;
+    }
+
+h2{
+    text-align: center;
+    margin: 0px;
+    }
+
+    .content{
+        margin-left: 187px;
+    }
+    .spacer{   
+        clear: both;
+    }
