@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKET_FORM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        fieldset{
+            border: double red 3px;
+        }
+
+        .article{
+            margin-left: 180px;
+        }
+        .FloatL{
+            float: left;
+        }
+        .width100{
+            width: 100%;
+        }
+        
+        @media (max-width:750px) {
+            .FloatL {
+                float: none;
+            }
+
+            .article{
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form action="http://fe.it-academy.by/TestForm.php" method="get">        
+            <!--Поле-->
+            <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p><br>
+            <label class="FloatL" for="Field1">Название статьи:</label>
+                <div class="article">
+                    <input class="width100" type="text" name="Title" id="Field1"><br>
+                </div>
+                     
+            <!--Выбор-->
+            <label class="FloatL" for="Choice">Рубрика:</label>
+               <div class="article">
+                   <select name="Heading" id="Choice">
+                    <option value="Programming">Программирование</option>
+                    <option value="DesignAndGraphics">Дизайн и графика</option>
+                    <option value="Hardware">Компьютерная техника</option>
+                   </select>
+               </div> <br>
+                
+            <!--Радиокнопки-->
+                <div class="FloatL">Публикация:</div>
+        
+                <div class="article">
+        
+                    <input type="radio" name="PublicType" value="Pt1" id="RAD1" >
+                    <label for="RAD1">На сайте</label>
+        
+                    <input type="radio" name="PublicType" value="Pt2" id="RAD2">
+                    <label for="RAD2">В журнале</label>
+        
+                    <input type="radio" name="PublicType" value="Pt3" id="RAD3">
+                    <label for="RAD3">На сайте и в журнале</label>
+                </div><br>
+                
+            <!--Чекбокс-->
+             <label for="Check">Разрешить комментарии:</label>
+                <input type="checkbox" name="Comments" id="Check" checked><br>
+               
+            <!--Область текста-->
+            <label for="Area">Текст статьи:</label><br>
+                <textarea class="width100" name="Text" id="Area"></textarea><br>        
+        
+            <input type="submit" value="Опубликовать">        
+        </form>
+        </fieldset>       
+</body>
+</html>

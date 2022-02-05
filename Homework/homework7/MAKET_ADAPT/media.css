@@ -1,0 +1,37 @@
+@media all and (max-width: 900px) {
+    .team{
+        float: none;
+    }
+    .menu{
+        height: 336px;
+    }
+    .header, .footer{
+        color: red;
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .menu{
+        float: none;
+        width: 100%;    
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style-type: none;
+    }
+    li{
+        margin-bottom: 5px;
+    }
+    .content{
+        background: none;
+        margin: 0;
+        text-align: center;
+    }
+    .team{
+        float: none;
+    }
+}

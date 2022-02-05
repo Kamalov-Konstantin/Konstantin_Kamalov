@@ -1,0 +1,50 @@
+.img_menu{     
+    background: url(img/menu.png) left top repeat-y;
+    }
+    .img_ball{
+        background: url(img/ball.png) right top repeat-y;
+    }
+    .header{
+        font-size: 30px;
+        text-align: center;
+        color: blue;
+        background: #a6e0ff;
+        padding: 10px;
+    }
+    .footer{
+        font-size: 30px;
+        color: blue;
+        text-align: center;
+        background: #a6e0ff;
+        padding: 20px;
+    }
+    .menu{    
+        float: left;
+        margin-left: -15px; 
+    }
+    .team{
+        float: left;
+    }
+
+h2{
+    text-align: center;
+    margin: 0px;
+    }
+
+    .content{
+        margin-left: 187px;
+    }
+    .spacer{   
+        clear: both;
+    }
+    div.fixed a{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        background-color: #a2f0a4;
+        border: solid 1px green;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 10px;
+        padding: 10px 15px;
+    }

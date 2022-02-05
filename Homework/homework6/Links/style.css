@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: green;
+}
+a:hover {
+    color: red;
+}
+.clear{
+    clear: both;
+}
+li{
+    float: left;
+    list-style-type: none;
+    margin: 10px;
+}
+.variant1 ul li:not(:last-child):after{
+    content: "";
+    border-right: solid red 3px;
+    padding-right: 15px;
+}
+.variant2 ul li:not(:first-child):before{
+    content: "";
+    border-left: solid red 3px;
+    padding-left: 30px;
+    margin-left: -15px;
+}
+.variant3 ul li {
+    border-right: solid red 3px;
+    padding-right: 15px;
+}
+.variant3 ul li:last-child{
+    border: none;
+}
