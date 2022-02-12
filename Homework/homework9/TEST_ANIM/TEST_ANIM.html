@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST_ANIM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+                .container{
+           /* background-color: gray;*/
+            width:1000px;
+            height: 400px;
+        }
+        .container:hover{
+            cursor:pointer;
+        }
+        .container:hover .form1{animation: Anim_form1 3s; transform:scale(0.8);}
+        .container:hover .form2{transform: rotate(360deg); animation:Anim_form2 3s;}
+        /*.container:hover .form4{animation: Anim_form4 2s; background-color:black;}*/
+
+       /* .figure{
+            border:solid 1px violet;
+        }*/
+            
+        .form1{
+            width: 100px;
+            height:50px;
+            background-color:green; 
+            font-size: 30px;  
+            text-align:center;
+            padding-top:10px;
+            margin-top: 20px;
+            margin-bottom:20px;
+            margin-left: 50%;
+            color:red;
+            transition-duration: 2s;
+        }
+        .form2{
+            width:100px;
+            height: 100px;
+            clip-path: circle(100px at 50px 50px);
+            border-radius:50%;
+            background-image:radial-gradient( circle at 50% top, green, yellow 90%);
+            margin: 20px;
+            margin-left: 300px;
+            color:red;
+            text-align:center;
+            padding-top:40px;
+            font-size: 30px; 
+            position: relative;
+            transition-duration:2s;
+        }
+        .form3{
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            color:red;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 10px;
+            margin-left:800px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            position:relative;
+            animation:Anim_form3a 2s linear alternate infinite, Anim_form3b 3s  linear alternate infinite;
+        }
+        /* 
+        .form4{
+            width:300px;
+            height:300px;
+            background-color:green;
+            margin: -14px;
+            clip-path: polygon(20px 150px, 70px 50px, 80px 100px);
+        }
+        */
+      
+        @keyframes Anim_form1
+        {
+            from {background-color:green; color: red}
+            50% {background-color: orange; color: blue}
+            to {background-color: black; color: white}
+        } 
+        @keyframes Anim_form2{
+            0% {top: 0px; right: 10px}
+            100% {bottom: 0px; right: -180px;}
+        }
+
+        @keyframes Anim_form3a 
+        {
+            from {transform: rotate(0deg)}
+            25%  {transform:rotate(-100deg)}
+            50%  {transform:rotate(0deg)}
+            to {transform:rotate(100deg)}
+        }
+        @keyframes Anim_form3b
+        {
+            from {top: 10px; left: 10px}
+            to {top: 100px; right: 600px;}
+        }
+       
+
+        /*@keyframes Anim_elem3
+        {
+            0% {clip-path: polygon(20px 80px, 100px 30px, 120px 200px)}
+            50% {clip-path: polygon(30px 100px, 150px 60px, 150px 250px)}
+            100% {clip-path: polygon(20px 80px, 100px 30px, 120px 200px)}
+        }
+       */
+        
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="figure">
+            <p class="form1">form1</p>
+        </div>
+      
+        <div class="figure">
+            <p class="form2">form2</p>
+        </div>
+        <div class="figure">
+            <p class="form3">form3</p>
+        </div>
+        <!-- <div class="figure">
+            <p class="form4">form4</p>
+        </div> 
+        -->
+    </div>
+    
+    
+</body>
+</html>

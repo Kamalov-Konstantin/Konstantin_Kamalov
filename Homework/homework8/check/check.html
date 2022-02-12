@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+     /* сам чекбокс скрываем */
+     input.SSmileCheckBox
+        {
+            visibility: hidden;
+        }
+    
+        /* перед ним показывам грустный смайлик */
+        input.SSmileCheckBox::before
+        {
+            visibility: visible; /* надо явно сделать его видимым, т.к. весь чекбокс невидим */
+            content:url('img/smile2.gif');
+            position: relative;
+            top: -0.5em;
+        }
+    
+        /* если чекбокс установлен - смайлик весёлый */
+        input.SSmileCheckBox:checked::before
+        {
+            content:url('img/smile1.gif');
+        }
+    
+        /* спан после чекбокса - красный */
+        input.SSmileCheckBox + span
+        {
+            color: red;
+        }
+    
+        /* спан после установленного чекбокса - зелёный */
+        input.SSmileCheckBox:checked + span
+        {
+            color: green;
+        }
+    span
+        {
+        display: block;
+        margin-left: 400px;
+        margin-top: 100px
+        }
+       
+        input.SShowCheckbox + label + div
+        {
+            display: none;
+        }
+    
+        input.SShowCheckbox:checked + label + div
+        {
+            display: block;
+        }
+        div.poem 
+        {
+    margin-top: 200px;
+    margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input class='SSmileCheckBox' type=checkbox checked>
+        <span>Щёлкни меня!</span>
+    </label>
+
+   <div class="poem">
+    <div>
+        Узник
+        Сижу за решеткой в темнице сырой.<br/>
+        Вскормленный в неволе орел молодой,<br/>
+        Мой грустный товарищ, махая крылом,<br/>
+        Кровавую пищу клюет под окном,
+    </div>
+
+    <input id=SHOW type=checkbox class='SShowCheckbox'>
+    <label for=SHOW;>показать больше</label>
+    <div>
+        Клюет, и бросает, и смотрит в окно,<br/>
+        Как будто со мною задумал одно;<br/>
+        Зовет меня взглядом и криком своим<br/>
+        И вымолвить хочет: «Давай улетим!<br/>
+        Мы вольные птицы; пора, брат, пора!<br/>
+        Туда, где за тучей белеет гора,<br/>
+        Туда, где синеют морские края,<br/>
+        Туда, где гуляем лишь ветер... да я!
+    </div>
+
+</body>
+</html>
